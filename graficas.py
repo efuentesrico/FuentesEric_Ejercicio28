@@ -4,24 +4,16 @@ import matplotlib.pyplot as plt
 
 plt.figure()
 
-data = np.loadtxt("data.dat")
+datax = np.loadtxt("datavx.dat")
+datay = np.loadtxt("datavy.dat")
 
-plt.subplot(1,2,1)
-t = data[:,0]
-v = data[:,1]
-x = data[:,2]
 
-plt.plot(t, v)
-plt.title("v vs t")
-plt.xlabel('t')
-plt.ylabel('v')
+x = datavx[:,1]
+y = datavy[:,1]
 
-plt.subplot(1,2,2)
-
-plt.plot(x, v)
-
-plt.title("x vs v")
+plt.plot(x, y)
+plt.title("x vs y")
 plt.xlabel('x')
-plt.ylabel('v')
+plt.ylabel('y')
 
 plt.savefig("grafica.png")
